@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
+/* GET users listing. */
 router.get('/', (req, res, next) => {
   res.json({
-    message: 'rota principal',
-    
-  })
+    message: "rota para cadastro e alteraçoes de produto"
+  });
 });
 
 module.exports = router;

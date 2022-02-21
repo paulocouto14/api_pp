@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 const LocalStrategy = require('passport-local').Strategy;
-// const users = require('../database/Pessoa')
+const users = require('../database/usuario')
 
 
  

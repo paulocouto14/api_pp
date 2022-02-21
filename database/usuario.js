@@ -1,21 +1,21 @@
 const db = require('./db')
 
 
-const produto = db.sequelize.define('produto', {
+const usuario = db.sequelize.define('usuarios_db', {
     id: {
         type: db.Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    nome:{
+    user:{
         type: db.Sequelize.STRING,
         allowNull: false
     },
-    preco:{
+    mail:{
         type: db.Sequelize.STRING,
         allowNull: false
     },
-    descricao:{
+    pass:{
         type: db.Sequelize.STRING,
         allowNull: false
     }
@@ -24,4 +24,4 @@ const produto = db.sequelize.define('produto', {
 module.exports = usuario;
 
 
-// produto.sync({ force: true })
+// usuario.sync({ force: true })
