@@ -21,7 +21,7 @@ const produto = db.sequelize.define('produto', {
     }
 });
 
-module.exports = usuario;
+module.exports = produto;
 
 
-// produto.sync({ force: true })
+produto.sync({ force: true })
