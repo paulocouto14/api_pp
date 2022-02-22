@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sty.css">
+    <title>Loguin</title>
+</head>
+<body>
+    <form action="/produtos/cadastro" method="post">
+        <div class="titulo">
+            <h1><%= title %></h1>
+        </div>
+        <div class="Usuario">
+            <label for="Usuario">
+                <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuario">
+            </label>
+        </div>
+        <div class="Senha">
+            <label for="senha">
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+            </label>
+        </div>
+        <div class="botao">
+            <button type="submit">Entrar</button>
+        </div>
+    </form>    
+</body>
+</html>

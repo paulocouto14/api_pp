@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sty.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <form action="/prod/cad" method="post">
+        <div class="titulo">
+            <h1><%= title %></h1>
+        </div>
+        <div class="Usuario">
+            <label for="Usuario">
+                <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuario">
+            </label>
+        </div>
+        <div class="Email">
+            <label for="Usuario">
+                <input type="email" name="email" id="email" placeholder="Digite seu Email">
+            </label>
+        </div>
+        <div class="Senha">
+            <label for="senha">
+                <input type="password" name="senha" id="senha" placeholder="Cadastre uma senha">
+            </label>
+        </div>
+        <div class="botao">
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>    
+</body>
+</html>

@@ -3,10 +3,9 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.json({
-    message: 'rota principal',
-    
-  })
+  res.render('index',{title:'Pagina de Loguin'})
 });
+
+
 
 module.exports = router;

@@ -12,7 +12,7 @@ const produto = db.sequelize.define('produto', {
         allowNull: false
     },
     preco:{
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         allowNull: false
     },
     descricao:{
@@ -24,4 +24,4 @@ const produto = db.sequelize.define('produto', {
 module.exports = produto;
 
 
-produto.sync({ force: true })
+// produto.sync({ force: true })

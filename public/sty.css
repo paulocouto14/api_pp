@@ -1,0 +1,31 @@
+html{
+    background-color: rgb(136, 99, 197);
+}
+.titulo{
+    text-align: center;
+    padding: auto;
+}
+.Usuario{
+    
+    text-align: center;
+    padding: auto;
+    margin:1%;
+    
+}
+.Senha{
+    text-align: center;
+    padding: auto;
+    margin-right: auto;
+    margin:1%;
+}
+.botao{
+    text-align: center;
+    padding: auto;
+    color: black;
+    border: 4px ;
+}
+.Email{
+    text-align: center;
+    padding: auto;
+    margin:1%;
+}
