@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('chama', 'root', 'root', {
-    host: 'localhost',
-    dialect: 'mysql'
+const sequelize = new Sequelize(process.env.DB || 'chama', process.env.USERDB || 'root', process.env.PASSDB || 'root', {
+    host: process.env.HOSTDB || 'localhost',
+    dialect: process.env.DRIVERDB || 'mysql'
 });
 
 sequelize.authenticate().then(() => {

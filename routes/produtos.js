@@ -2,7 +2,7 @@ const express = require('express');
 const Usuario = require('../database/usuario')
 const router = express.Router();
 const bcrypt = require('bcryptjs')
-const salt = bcrypt.genSaltSync(10) // variavel de ambient
+const salt = bcrypt.genSaltSync(process.env.SALT || 10) // variavel de ambient
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
