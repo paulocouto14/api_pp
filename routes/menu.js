@@ -3,9 +3,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
-  res.json({
-    message: "rota protegida"
-  });
+    res.render('menu', { title: 'menu' })
 });
 
 module.exports = router;

@@ -13,6 +13,7 @@ require('./config/auth')(passport)
 
 var indexRouter = require('./routes/index');
 var produtosRouter = require('./routes/produtos');
+var menuRouter = require('./routes/menu')
 
 function authenticationMiddleware(req, res, next) {
   if (req.isAuthenticated()) return next();
@@ -47,7 +48,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+app.use('/menu', authenticationMiddleware, menuRouter)
 app.use('/cadastro', authenticationMiddleware, produtosRouter);
 app.use('/', indexRouter);
 

@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/entrar',bruteforce.prevent, passport.authenticate('local', {failureRedirect:'/'}),(req, res, next) => {
-	res.send('Success!')
+	res.redirect('/menu')
 });
 
 

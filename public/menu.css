@@ -2,13 +2,13 @@ body {
     background: rgb(58, 58, 131);
     font: normal 15pt Arial;
 }
-  
+
 header {
     color: white;
     text-align: center;
   
 }
-  
+
 section {    
     background: white;
     border-radius: 10px;
@@ -20,21 +20,10 @@ section {
     word-wrap: break-all;
     
 }
-  
+
 footer {
     color: white;
     text-align: center;
     font-style: italic;
 }
   
-input {
-    width: 200px;  
-}
-  
-button {
-    margin: 10px;
-    color: rgb(46, 42, 42);
-    text-align: center;
-    font-style: italic;
-    width: 100px;
-}

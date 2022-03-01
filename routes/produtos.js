@@ -6,7 +6,7 @@ const salt = bcrypt.genSaltSync(process.env.SALT || 10) // variavel de ambient
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
-  res.render('cad',{title:'Cadastro de Usuario'})
+  res.render('cad',{ title:'Cadastro de Usuario' })
 });
 
 router.post('/cad', (req, res, next) => {
