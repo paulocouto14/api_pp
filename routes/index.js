@@ -7,7 +7,7 @@ const passport = require('passport')
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index',{title:'Pagina de Loguin'})
+  res.render('index',{ title:'Pagina de Loguin' })
 });
 
 router.post('/entrar',bruteforce.prevent, passport.authenticate('local', {failureRedirect:'/'}),(req, res, next) => {

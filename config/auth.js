@@ -6,18 +6,17 @@ const users = require('../database/usuario')
  
 module.exports = function(passport){
     
-    function findUserById(id){
-        return users.findOne({where:{id:id}})
-        
-    }
+
 
     passport.serializeUser((user, done) => {
         done(null, user.id);
     });
+
+    
  
     passport.deserializeUser((id, done) => {
         try {
-            const user = findUserById(id);
+            const user = users.findOne({where:{id:id}});
             done(null, user);
         } catch (err) {
             done(err, null);

@@ -19,9 +19,8 @@ router.post('/cad', (req, res, next) => {
     console.log('Novo Usuario:'+req.body.usuario)
     console.log('Email:'+req.body.email)
     console.log('Senha:'+senhaParaSalvar)
-  }).catch((err) => console.log('error: '+ err))
-  
-  res.redirect('/')
+  }).catch((err) => console.log('error: '+ err))  
+  res.redirect('/menu')
 })
 
 module.exports = router;
