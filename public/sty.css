@@ -1,31 +1,41 @@
-html{
-    background-color: rgb(136, 99, 197);
+body { 
+    background: rgb(58, 58, 131);
+    font: normal 15pt Arial;
 }
-.titulo{
+  
+header {
+    color: white;
     text-align: center;
-    padding: auto;
+  
 }
-.Usuario{
+  
+section {
     
+    background: white;
+    border-radius: 10px;
+    padding:20px ;
+    width: 300px;
+    margin: auto;
+    box-shadow: 5px 5px 15px 5px rgba(83, 64, 64, 0.164);
     text-align: center;
-    padding: auto;
-    margin:1%;
+    word-wrap: break-all;
     
 }
-.Senha{
+  
+footer {
+    color: white;
     text-align: center;
-    padding: auto;
-    margin-right: auto;
-    margin:1%;
+    font-style: italic;
 }
-.botao{
-    text-align: center;
-    padding: auto;
-    color: black;
-    border: 4px ;
+  
+input {
+    width: 200px;  
 }
-.Email{
+  
+button {
+    margin: 10px;
+    color: rgb(46, 42, 42);
     text-align: center;
-    padding: auto;
-    margin:1%;
+    font-style: italic;
+    width: 100px;
 }

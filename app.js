@@ -48,7 +48,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.use('/cadastro',authenticationMiddleware, produtosRouter);
+app.use('/cadastro', authenticationMiddleware, produtosRouter);
 app.use('/', indexRouter);
 
 

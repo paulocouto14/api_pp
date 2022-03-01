@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sty.css">
-    <title>Loguin</title>
-</head>
-<body>
-    <form action="/entrar" method="post">
-        <div class="titulo">
-            <h1><%= title %></h1>
-        </div>
-        <div class="Usuario">
-            <label for="Usuario">
-                <input type="text" name="username" id="username" placeholder="Digite seu usuario">
-            </label>
-        </div>
-        <div class="Senha">
-            <label for="senha">
-                <input type="password" name="password" id="password" placeholder="Digite sua senha">
-            </label>
-        </div>
-        <div class="botao">
-            <button type="submit">Entrar</button>
-        </div>
-    </form>    
-</body>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/sty.css' />
+  </head>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+    </header>
+    <section>
+      <form action="/entrar" method="post">                
+        <label for="login">E-mail:</label>
+        <input type="email" name="login" id="login" placeholder="Entre com seu email ..."><br>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha"placeholder="Entre com sua senha ..."><br>
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+    <footer>      
+      <p>Bem vindo a <%= title %></p>
+    </footer>
+  </body>
 </html>

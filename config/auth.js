@@ -25,11 +25,11 @@ module.exports = function(passport){
     });
 
     passport.use(new LocalStrategy({
-    usernameField: 'username',
-    passwordField: 'password'
+    usernameField: 'login',
+    passwordField: 'senha'
     },
     (username, password, done) => {
-        users.findOne({where:{user:username}}).then((usuario) => {
+        users.findOne({where:{mail:username}}).then((usuario) => {
             console.log('carregando ...')
             if(!usuario) {
                 console.log('usuario errado')
