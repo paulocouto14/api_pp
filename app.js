@@ -13,7 +13,8 @@ require('./config/auth')(passport)
 
 var indexRouter = require('./routes/index');
 var produtosRouter = require('./routes/produtos');
-var menuRouter = require('./routes/menu')
+var menuRouter = require('./routes/menu');
+var uploadRouter = require('./routes/upload')
 
 function authenticationMiddleware(req, res, next) {
   if (req.isAuthenticated()) return next();
@@ -48,6 +49,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use('/upload', uploadRouter)
 app.use('/menu', authenticationMiddleware, menuRouter)
 app.use('/cadastro', authenticationMiddleware, produtosRouter);
 app.use('/', indexRouter);

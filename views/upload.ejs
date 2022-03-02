@@ -12,18 +12,17 @@
         <h1><%= title %></h1>
     </header>
     <section>
-        <div>
-            <ol>                
-                <lu><a href="">Lista de usuarios</a></lu><br>
-                <lu><a href="">Lista de produtos</a></lu><br>
-                <lu><a href="/cadastro">Cadastro de usuarios</a></lu><br>
-                <lu><a href="">Cadastro de produtos</a></lu><br>
-                <lu><a href="/upload">Upload de Arquivos</a></lu><br>
-            </ol>
+        <div>   
+            <form action="/upload/up" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="file">
+                <button type="submit">Enviar</button>
+                
+            </form>
+            <a href="/menu"><button>Voltar</button></a>
         </div>
     </section>
     <footer>
-        <p>Lista de Menu</p>
+        <p>paragrafo footer</p>
     </footer>
 </body>
 </html>
