@@ -11,12 +11,12 @@ const session = require('express-session');
 require('./config/auth')(passport)
 
 
-var indexRouter = require('./routes/index');
-var produtosRouter = require('./routes/produtos');
-var menuRouter = require('./routes/menu');
-var uploadRouter = require('./routes/upload')
+const indexRouter = require('./routes/index');
+const produtosRouter = require('./routes/produtos');
+const menuRouter = require('./routes/menu');
+const uploadRouter = require('./routes/upload')
 
-function authenticationMiddleware(req, res, next) {
+authenticationMiddleware = (req, res, next) => {
   if (req.isAuthenticated()) return next();
   res.redirect('/');
 }
@@ -49,7 +49,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/upload', uploadRouter)
+app.use('/upload', authenticationMiddleware, uploadRouter)
 app.use('/menu', authenticationMiddleware, menuRouter)
 app.use('/cadastro', authenticationMiddleware, produtosRouter);
 app.use('/', indexRouter);
@@ -58,7 +58,7 @@ app.use('/', indexRouter);
 
 
 // catch 404
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   res.status(404).send('Not found');
   next();
 });
