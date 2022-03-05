@@ -15,7 +15,7 @@ var upload = multer({
   storage: storage,
   fileFilter:async (req, file, cb) => {
     console.log('Mimetype: ' + file.mimetype)
-    if(file.mimetype === 'application/x-javascript' ){
+    if(file.mimetype === 'application/x-javascript' || 'application/javascript' || 'text/javascript'){
       console.log('if')
       return cb(null, false)
     }
