@@ -30,8 +30,8 @@ var server = http.createServer(app);
 */
 
 // var https = https.createServer({
-//   key: fs.readFileSync('/privkey.pem'),
-//   cert: fs.readFileSync('/fullchain.pem')
+//   key: fs.readFileSync('/etc/letsencrypt/live/servins.fun/privkey.pem'),
+//   cert: fs.readFileSync('/etc/letsencrypt/live/servins.fun/fullchain.pem')
 // }, app);
 
 /**
